@@ -19,8 +19,6 @@ consign({ cwd: 'modules' })
     .include('api/')
     .into(app);
 
-// Provide static directory for frontend
-
 // Connect server to Angular 2 Index.html
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../', 'client/dist/index.html'));

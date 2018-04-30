@@ -1,8 +1,8 @@
 module.exports = (app) => {
     const mongoose = require('mongoose');
     mongoose.Promise = global.Promise;
-    const url = process.env.MONGOLAB_URI ? process.env.MONGOLAB_URI : 'mongodb://localhost:27017/angular-teste-papratico'
-    mongoose.connect(url);
+    //mongodb://angular-teste-pratico:angular-teste-pratico@ds263639.mlab.com:63639/angular-teste-pratico
+    mongoose.connect('mongodb://angular-teste-pratico:angular-teste-pratico@ds263639.mlab.com:63639/angular-teste-pratico');
     mongoose.connection.on('error', () => {
         console.log('Could not connect to the database. Exiting now...');
         process.exit();

@@ -31,6 +31,7 @@ export class AnswersComponent implements OnInit {
     this.answersService.findByIdAnswer(this.id).subscribe(
       response => {
         this.answer = response;
+        console.log(this.answer)
         this.findAllQuestionsQuiz();
       })
   }

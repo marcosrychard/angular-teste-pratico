@@ -1,21 +1,21 @@
 # client
-src/client/dist
-src/client/dist-server
-src/client/tmp
-src/client/out-tsc
-src/client/node_modules
-src/client/connect.lock
-src/client/coverage
-src/client/libpeerconnection.log
-src/client/typings
-src/client/package-lock.json
-src/client/e2e/*.js
-src/client/e2e/*.map
+client/dist
+client/dist-server
+client/tmp
+client/out-tsc
+client/node_modules
+client/connect.lock
+client/coverage
+client/libpeerconnection.log
+client/typings
+client/package-lock.json
+client/e2e/*.js
+client/e2e/*.map
 
 # server
-src/server/node_modules
-src/server/dist
-src/server/package-lock.json
+server/node_modules
+server/dist
+server/package-lock.json
 
 
 # IDEs and editors

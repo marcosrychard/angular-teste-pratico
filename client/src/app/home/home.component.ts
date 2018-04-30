@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
     if (this.formulario.status === 'INVALID') {
       this.formulario.get('accept').markAsTouched()
     } else if (this.formulario.get('accept').value) {
-      this.route.navigate(['/answers/5ae604ceb0b37504b4c0f8b0'])
+      this.route.navigate(['/answers/5ae759f74fc71201549c5138'])
     }
   }
 
