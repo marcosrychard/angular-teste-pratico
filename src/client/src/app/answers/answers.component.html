@@ -1,0 +1,32 @@
+<div class="container-fluid" style="margin-top: 20px;padding: 20px">
+  <div class="panel panel-success">
+    <div class="panel-heading text-center">
+      <h3>PERFIL DO INVESTIDOR</h3>
+    </div>
+    <div class="panel-body">
+      <div *ngFor="let question of questions; let i =index">
+        <ul class="list-group">
+          <div [ngSwitch]="question.type">
+            <div *ngSwitchCase="'RADIO_BUTTON'">
+              <li class="list-group-item">
+                <strong>{{question.text}}</strong>
+                <ul>
+                  <li>{{answer.optionAnswered[i]}}. </li>
+                </ul>
+              </li>
+            </div>
+            <div *ngSwitchCase="'SELECT_ITEM'">
+              <li class="list-group-item">
+                <strong>{{question.text}}</strong>
+                <ul>
+                  <li *ngFor="let subject of answer.subject">
+                    <strong>{{subject.key}} :</strong> {{subject.value}}</li>
+                </ul>
+              </li>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

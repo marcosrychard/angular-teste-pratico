@@ -1,0 +1,49 @@
+# client
+src/client/dist
+src/client/dist-server
+src/client/tmp
+src/client/out-tsc
+src/client/node_modules
+src/client/connect.lock
+src/client/coverage
+src/client/libpeerconnection.log
+src/client/typings
+src/client/package-lock.json
+src/client/e2e/*.js
+src/client/e2e/*.map
+
+# server
+src/server/node_modules
+src/server/dist
+src/server/package-lock.json
+
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+client/.editorconfig
+# IDE - VSCode
+client/.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+
+/package-lock.json
+/dist
+/.vscode
+npm-debug.log
+yarn-error.log
+testem.log
+
+# System Files
+.DS_Store
+Thumbs.db

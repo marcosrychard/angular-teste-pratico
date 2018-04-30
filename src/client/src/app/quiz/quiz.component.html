@@ -1,0 +1,84 @@
+<div class="container" style="margin-top: 20px;padding: 20px">
+    <div class="panel panel-default">
+        <div class="panel-heading text-center">
+            <h3>PERFIL DO INVESTIDOR - QUESTIONÁRIO</h3>
+        </div>
+        <br>
+        <br>
+        <div class="panel-body">
+            <div class="container">
+                <form [formGroup]="formulario" (ngSubmit)="onSubmit()" name="formQuiz" method="POST" novalidate>
+                    <div class="text-center" *ngFor="let question of questions;let i = index ">
+                        <div [ngSwitch]="question.type">
+                            <div *ngSwitchCase="'RADIO_BUTTON'">
+                                <h5 class="text-center">{{question.text}}</h5>
+                                <br/>
+                                <div class="form-control">
+                                    <div *ngFor="let item of question.items">
+                                        <label class="radio">
+                                            <input id="{{item}}" type="radio" formControlName="QUESTION_RADIO_BUTTON{{i+1}}" [value]="item">
+                                            <label for="{{item}}">{{item}}</label>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div *ngSwitchCase="'SELECT_ITEM'">
+                                <h5 class="text-center">{{question.text}}</h5>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="text-center">FUNDOS DE INVESTIMENTO</label>
+                                        <select formControlName="select1" class="form-control">
+                                            <option *ngFor="let a of question.items" [ngValue]="a">
+                                                <p>{{a}}</p>
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="text-center">AÇÕES A VISTA</label>
+                                        <select formControlName="select2" class="form-control">
+                                            <option *ngFor="let b of question.items" [ngValue]="b">
+                                                <p>{{b}}</p>
+                                            </option>
+                                        </select>
+                                        <br>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="text-center">ALUGUEL DE AÇÕES TERMOS OPÇÕES E FUTUROS</label>
+                                        <select formControlName="select3" class="form-control">
+                                            <option *ngFor="let c of question.items" [ngValue]="c">
+                                                <p>{{c}}</p>
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="text-center">TITULOS DE RENDA FIXA OU TESOURO DIRETO</label>
+                                        <select formControlName="select4" class="form-control">
+                                            <option *ngFor="let d of question.items" [ngValue]="d">
+                                                <p>{{d}}</p>
+                                            </option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="pull-right form-inline" style="padding-top: 20px;float: right">
+                                    <button type="button" class="btn btn-default" style="margin-right: 10px" routerLink="">Voltar</button>
+                                    <button type="submit" class="btn btn-primary" [disabled]="!formulario.valid">Salvar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>

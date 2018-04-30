@@ -1,0 +1,65 @@
+<div id="centro" class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="container-fluid">
+        <div class="text-center">
+          <img width="80px" src="../../assets/images/icon.jpg">
+          <br>
+          <label>INFORMAÇÕES RECEBIDAS!</label>
+        </div>
+        <br>
+      </div>
+      <p class="text-center">
+        Em até 48h daremos um retorno sobre a abertura de sua conta.
+        <br> Para receber nossas recomendações de investimentos e começar a investir, precisamos conehcer seu perfil de investidor.
+        <br>São apenas 4 perguntas, que irão guiar todas as suas decisões de investimentos
+      </p>
+    </div>
+    <br>
+    <div class="text-center row">
+      <div class="col-md-12">
+        <p>Gostaria de responder ao Perfil do investidor?</p>
+        <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">Não</button>
+        <button type="button" class="btn btn-primary " routerLink="/quizzes">Sim</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal   -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Termo</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultricies dictum dolor vitae tristique. Phasellus
+            non viverra urna, et interdum lectus. Vivamus interdum arcu vitae nibh mollis pharetra. Maecenas a venenatis
+            dolor, ac tempor magna. Nam quis euismod eros. Nullam sit amet tempus quam, in molestie sapien. Donec suscipit
+            lorem eu iaculis scelerisque. Pellentesque porttitor, erat vel ultrices fringilla, lorem metus tincidunt orci,
+            eget tincidunt dolor augue nec nisl. Proin non sagittis risus, et semper elit. Proin vestibulum tempus leo, a
+            condimentum ipsum finibus a. Nullam feugiat nisi id blandit consequat. Pellentesque sed tempor velit, quis porttitor
+            sem. Morbi consectetur augue vel accumsan pretium. Vestibulum a facilisis enim. Sed ac turpis mi.
+          </p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="container">
+          <form [formGroup]="formulario" novalidate>
+            <div class="form-group">
+              <input id="accetp" type="checkbox" formControlName="accept" required />
+              <label for="accetp">Li e aceito os termos e condições acima</label>
+              <br>
+              <button type="button" class="btn btn-primary btn-block" data-dismiss="modal" [disabled]="!formulario.valid " (click)="onSubmit()">Ok, entendi</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
