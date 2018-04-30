@@ -36,7 +36,6 @@ export class QuizFormComponent implements OnInit {
       select4: [null, Validators.required],
     });
   }
-  
 
   ngOnInit() {
     this.findAllQuestionsQuiz();
@@ -44,7 +43,6 @@ export class QuizFormComponent implements OnInit {
 
   onSubmit() {
     this.answerQuiz()
-    console.log(this.formulario)
   }
 
   answerQuiz() {

@@ -20,8 +20,7 @@ export class HomeComponent implements OnInit {
       accept: [null, Validators.required]
     });
   }
-
-
+  
   ngOnInit() {
   }
 
