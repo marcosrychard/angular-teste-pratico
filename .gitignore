@@ -4,7 +4,7 @@ dist-server
 tmp
 out-tsc
 node_modules
-connect.lock
+*.lock
 coverage
 libpeerconnection.log
 typings
