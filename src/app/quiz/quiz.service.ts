@@ -11,8 +11,8 @@ export class QuizService {
 
 
   //private apiUrl: string = 'http://www.mocky.io/v2/5ae3e0e3310000390d083f52'
-  private apiUrl: string = 'http://localhost:3000/quizzes'
-
+  //private apiUrl: string = 'http://localhost:3000/quizzes'
+  private apiUrl: string = 'https://api-angular-teste-pratico.herokuapp.com/quizzes'
   constructor(private http: Http) { }
 
   findAllQuestionsQuiz(): Observable<Quiz[]> {

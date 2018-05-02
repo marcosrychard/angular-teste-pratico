@@ -8,7 +8,8 @@ import { Answer } from './answer.model';
 @Injectable()
 export class AnswersService {
 
-  private apiUrl: string = 'http://localhost:3000/answers'
+//private apiUrl: string = 'http://localhost:3000/answers'
+  private apiUrl: string = 'https://api-angular-teste-pratico.herokuapp.com/answers'
 
   constructor(private http: Http) { }
 

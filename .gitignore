@@ -1,45 +1,36 @@
-# client
-client/dist
-client/dist-server
-client/tmp
-client/out-tsc
-client/node_modules
-client/connect.lock
-client/coverage
-client/libpeerconnection.log
-client/typings
-client/package-lock.json
-client/e2e/*.js
-client/e2e/*.map
-
-# server
-server/node_modules
-server/dist
-server/package-lock.json
-
+#
+dist
+dist-server
+tmp
+out-tsc
+node_modules
+connect.lock
+coverage
+libpeerconnection.log
+typings
+package-lock.json
+e2e/*.js
+e2e/*.map
 
 # IDEs and editors
-/.idea
+.idea
 .project
 .classpath
 .c9/
 *.launch
 .settings/
 *.sublime-workspace
-client/.editorconfig
+/.editorconfig
 # IDE - VSCode
-client/.vscode/*
+/.vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 
 # misc
-/.sass-cache
-
-/package-lock.json
-/dist
-/.vscode
+.sass-cache
+.vscode
 npm-debug.log
 yarn-error.log
 testem.log
